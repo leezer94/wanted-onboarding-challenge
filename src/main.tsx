@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
+import './App.css';
+import { Router, Route } from './libs/fake-router-dom';
+import { About, Root } from './Components';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const container = document.getElementById('root') as HTMLElement;
+
+ReactDOM.createRoot(container).render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Route path='/' component={<Root />}></Route>
+      <Route path='/about' component={<About />}></Route>
+    </Router>
   </React.StrictMode>
 );
