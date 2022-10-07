@@ -1,10 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 
-const Router = ({ children }) => {
+const Router = ({ children }: { children: ReactNode }): any => {
   return children;
 };
 
-const Route = ({ path, component }) => {
+const Route = ({
+  path,
+  component,
+}: {
+  path: string;
+  component: ReactNode;
+}): any => {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
 
   useEffect(() => {

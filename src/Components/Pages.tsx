@@ -1,6 +1,6 @@
 import Link from './Link';
 
-const Root = () => {
+const Root = (): JSX.Element | null => {
   const path = window.location.pathname;
 
   if (path === '/') {
@@ -13,9 +13,11 @@ const Root = () => {
       </div>
     );
   }
+
+  return <></>;
 };
 
-const About = () => {
+const About = (): JSX.Element | null => {
   const path = window.location.pathname;
 
   if (path === '/about')
@@ -27,6 +29,8 @@ const About = () => {
         </Link>
       </div>
     );
+
+  return <></>;
 };
 
 export { Root, About };

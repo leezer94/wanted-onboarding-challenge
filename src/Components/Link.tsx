@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import { useRouter } from '../hooks';
 
-const Link = ({ href, children }) => {
+const Link = ({ href, children }: { href: string; children: ReactElement }) => {
   const { push } = useRouter();
 
   return (

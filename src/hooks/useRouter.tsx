@@ -1,5 +1,5 @@
 const useRouter = () => {
-  const push = (e, href) => {
+  const push = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
     if (e.metaKey || e.ctrlKey) {
       return;
     }
